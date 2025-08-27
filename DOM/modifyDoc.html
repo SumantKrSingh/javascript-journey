@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .alert {
+            padding: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            color: #3c763d;
+            background-color: #dff0d8;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 2nd -->
+    <ol id="ol">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+
+    <!-- 3rd -->
+    <div id="div"></div>
+
+    <script>
+
+        // 1.st creating html elements through js dom
+        let div = document.createElement('div');
+        div.className = "alert";
+        div.innerHTML = "<strong> Hi! There</strong> You are seeing a important messages from system";
+
+        document.body.append(div);
+
+
+        //2nd Inserting value using after-before and append or prepend
+        ol.before("Before"); // inserting string before ol tag
+        ol.after("After"); // after end of ol tag
+
+        let liFirst = document.createElement('li');
+        liFirst.innerHTML = "Prepend";
+        ol.prepend(liFirst);
+
+        let liLast = document.createElement('li');
+        liLast.innerHTML = "Append";
+        ol.append(liLast);
+
+
+        //3rd InsertAdjacentHTML for inserting elem in better way
+        div.insertAdjacentHTML('beforebegin', '<p>Hello</p>');
+        div.insertAdjacentHTML('afterend', '<p>Bye - Bye </p>')
+        // we can do exxample 1 using this InserAdjacentHTML
+
+
+        // Node Removal ... removing first example prop we made using js
+        setTimeout(() => div.remove(), 1000);
+    </script>
+</body>
+
+</html>

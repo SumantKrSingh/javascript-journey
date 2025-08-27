@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <input id="elem" value="Click me" onclick='countNum()' type="button">
+
+    <script>
+        function countNum() {    //1st way
+            for (let i = 1; i <= 4; i++) {
+                alert("Black Monkeys " + i);
+            }
+        }
+
+        elem.onclick = () => { //2nd way
+            alert("Thank You")
+        }
+
+        // 3rd way
+        function sayThanks() {
+            alert('Thanks!');
+        }
+
+        elem.onclick = sayThanks;
+
+
+
+        // Adding and removing multiple event listener
+        // function handler1() {
+        //     alert('Thanks!');
+        // };
+
+        // function handler2() {
+        //     alert('Thanks again!');
+        // }
+
+        // elem.onclick = () => alert("Hello");
+        // elem.addEventListener("click", handler1); // Thanks!
+        // elem.addEventListener("click", handler2);
+
+        // elem.removeEventListener("click", handler1);
+    </script>
+</body>
+
+</html>

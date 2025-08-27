@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="elem">
+        <div id="element">Mera naam Doremon hai !</div>
+    </div>
+
+    <ul>
+        <li>Test</li>
+        <li>Result</li>
+    </ul>
+    <ul>
+        <li>Passed</li>
+        <li>Passed</li>
+    </ul>
+
+    <script> 
+        // getElementById
+        let elem = document.getElementById("elem");
+        elem.style.background ='red'
+
+
+        // querySelectorAll
+        let element =document.querySelectorAll('ul > li:last-child');
+        for(let eleme of element){
+            alert(eleme.innerHTML);
+        }
+    </script>
+</body>
+</html>

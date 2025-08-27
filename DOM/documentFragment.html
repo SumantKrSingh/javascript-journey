@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-Fragment</title>
+</head>
+
+<body>
+    <ul id="ul"></ul>
+
+    <script>
+
+        // DocumentFragment is a special DOM node that serves as a wrapper to pass around lists of nodes.
+        function getList() {
+            let fragment = new DocumentFragment();
+
+            for (let i = 1; i <= 5; i++) {
+                let li = document.createElement('li');
+                li.append(i);
+                fragment.append(li);
+            }
+            return fragment;
+        }
+        ul.append(getList());
+
+
+        // 2nd way without Document Fragment
+        function getListContent() {
+            let result = [];
+            for (let i = 1; i <= 4; i++) {
+                let li = document.createElement('li');
+                li.append(i);
+                result.push(li);
+            }
+            return result;
+        }
+        ul.append(...getListContent());
+    </script>
+</body>
+
+</html>

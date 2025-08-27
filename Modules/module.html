@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <!-- Example 1 -->
+    <script type="module">
+        import {isOddEven} from "./module.js";
+
+        const input = prompt("Enter a number : ");
+        const number = parseInt(input);
+
+        if(!isNaN(number)){
+            const result = isOddEven(number);
+            document.body.innerHTML= result
+        }else{
+            document.body.innerHTML("Please enter a valid number")
+            
+        }
+    </script>
+
+
+
+
+<!-- Import.meta url shows current page url -->
+ 
+<!-- <script type="module">
+    alert(import.meta.url);
+</script> -->
+
+</body>
+</html>
+

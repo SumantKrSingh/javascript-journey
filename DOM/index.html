@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        document.body.style.background = 'red';
+        setTimeout(() => document.body.style.background ='', 4000);
+
+        alert(location.href);
+        if(confirm("Go to wikipedia ?")){
+            location.href = "https://wikipedia.org"
+        }
+
+        for(let i = 0; i < document.body.childNodes.length; i++){
+            alert(document.body.childNodes[i]);
+        }
+    </script>
+</body>
+</html>
+

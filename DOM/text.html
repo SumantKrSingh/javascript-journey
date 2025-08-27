@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #ee061cc2;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="text-node">
+        <div id="news">
+            <h1>Headline</h1>
+            <p>Rats attacked on cats</p>
+        </div>
+    </section>
+
+    <section class="hidden-prop">
+        <div>Both divs are hidden</div>
+        <div hidden> My name is Sumant</div>
+        <div id="elem"> I am now 22 years old </div>
+    </section>
+
+    <section class="blink-hide">
+        <div id="blinking">
+            <h2>This word is blinking</h2>
+        </div>
+    </section>
+
+
+    <script>
+        alert(news.textContent);
+
+        elem.hidden = true; // through js
+
+        setInterval(() => blinking.hidden = !blinking.hidden, 200) // bliking thw element
+    </script>
+</body>
+
+</html>

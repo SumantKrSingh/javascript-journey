@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="my">
+        <input type="text" name="one" value="1">
+        <input type="text" name="two" value="2">
+    </form>
+
+
+    <script>
+        let form = document.forms.my;
+        let elem = form.elements.one;
+        alert(elem.value);
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+<!--  Focus/ Blur -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #error {
+            color: #ff0000;
+        }
+
+        .invalid {
+            border-color: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    Your Email Id Please :
+    <input type="email" name="" id="email">
+    <div id="error"></div>
+
+    <script>
+        let email = document.getElementById("email");
+
+        email.onblur = () => {
+            if (!email.value.includes("@")) {
+                email.classList.add("invalid");
+                error.innerHTML = "Please enter a valid email including @"
+            }
+        }
+
+        email.onfocus = () => {
+            if (email.classList.contains("invalid")) {
+                email.classList.remove("invalid");
+                error.innerHTML = " ";
+            }
+        }
+    </script>
+</body>
+
+</html>
